@@ -177,11 +177,11 @@ Environment variables used by the backend (besides `KUBECONFIG` for Kubernetes a
 
 | Variable | Default | What it does |
 |---|---|---|
-| `PREFIX_FOR_NAME` | `ws` | Prefix applied to user-facing names to build K8s object names (e.g., `ws-alice`). |
-| `USE_VCLUSTER` | `no` |  Whether to provision an isolated vcluster for each datalab session or run in separate namespace on host cluster. |
-| `SESSION_AUTO_MODE` | `no` | Whether sessions can be started on-demand with automatic shutdown (`yes`) or are always-on (`no`). |
-| `STORAGE_SECRET_NAME` | `<principal>-datalab` | Name template for the secret that contains S3 credentials for the workspace. |
-| `CONTAINER_REGISTRY_SECRET_NAME` | `<principal>-container-registry` | Name template for the secret holding per-workspace container registry (OCI) credentials. |
+| `PREFIX_FOR_NAME` |  | Prefix applied to user-facing names to build K8s object names (e.g. `ws` to get `ws-alice` for `alice`). |
+| `USE_VCLUSTER` | `false` |  Whether to provision an isolated vcluster for each datalab session (`true`) or run in separate namespace on host cluster (`false`). |
+| `SESSION_MODE` | `on` | Whether sessions can be started on-demand with automatic shutdown (`auto`) or are always on (`on`) or off (`off`). |
+| `STORAGE_SECRET_NAME` | `<principal>` | Name template for the secret that contains S3 credentials for the workspace. |
+| `CONTAINER_REGISTRY_SECRET_NAME` | `<principal>` | Name template for the secret holding per-workspace container registry (OCI) credentials. |
 | `ENDPOINT` | from `AWS_ENDPOINT_URL` | S3 endpoint URL used when falling back to environment-based config. |
 | `REGION` | from `AWS_REGION` or `AWS_DEFAULT_REGION` | S3 region used when falling back to environment-based config. |
 | `UI_MODE` | `no` | Set to `ui` to enable templated HTML shell and SPA embedding. |
